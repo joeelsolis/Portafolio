@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portafolio Joel Solís</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+nav a{
+            position: relative;
+            font-size: 20px;
+            color: blue;
+            font-weight: 500;
+            text-decoration: none;
+            margin-left: 40px;
+        }
+
+        a::before{
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: black;
+            transition: 3s;
+        }
+
+        nav a:hover::before{
+            width: 100%;
+        }
+
+body{
+         min-height: 100%;
+     }
+
+     html{
+         height: 100%;
+     }
+
+.grid-container{
+            background-color: gray;
+            display: flex;
+            flex-direction: row;
+            text-align: justify;
+        }
+
+        /*telefono*/
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto;
+            gap: 10px;
+        
+        }
+        /*tablet*/
+        @media(min-width:768px){
+            .grid-container{
+                grid-template-columns: auto auto;
+                grid-template-areas:  
+                "box box"
+                "box box"
+                "box box"
+                "box box"
+                ;       
+                
+            }
+        }
+
+        /*laptop*/
+        @media(min-width:900px){
+            .grid-container{
+                grid-template-columns: auto auto auto;
+                grid-template-areas:
+                "box box box" 
+                "box box box"
+                "box box box"
+                 ;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <h1> Joel Solís - Desarrollador Java FullStack</h1>
+    <nav>
+      <a href="https://www.linkedin.com/in/joel-pacheco-sol%C3%ADs-143236226?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Linkedln</a>
+      <a href="https://github.com/JoelSoli">GitHub</a>
+    </nav>
+   <main class="grid-container">
+   <!--Bootstrap-->
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="/elementos/yomero.JPG" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Joel Solís</h5>
+            <p class="card-text">Ingeniero Industrial y desarrollador Java Full Stack Jr con gusto por la tecnología, resolución de problemas y aprendizaje continuo. Cuento con habilidades técnicas como blandas para llevar acabo el trabajo en equipo en la codificación, diseño y modificación de aplicaciones y páginas web, mediante los diferentes lenguajes de programación.</p>
+            <p>Actualmente me encuentro en Generation colaborando en el desarrollo del proyecto Konect-e, herramienta que ofrecerá trabajos de tipo oficio a la población.</p>
+            <p class="card-text"><small class="text-body-secondary">Java FullStack Developer</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+   </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="js/main.js" defer></script> 
+
+  </body>
+</html> 
