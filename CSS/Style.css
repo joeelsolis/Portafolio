@@ -1,0 +1,74 @@
+nav a{
+    position: relative;
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 250px;
+}
+
+a::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: 3s;
+}
+
+nav a:hover::before{
+    width: 100%;
+}
+
+body{
+ min-height: 100%;
+ background-color: skyblue;
+ text-align: center;
+}
+
+html{
+ height: 100%;
+ width: 100%;
+}
+
+.grid-container{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+}
+
+/*telefono*/
+.grid-container{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+
+}
+/*tablet*/
+@media(min-width:768px){
+    .grid-container{
+        grid-template-columns: auto auto;
+        grid-template-areas:  
+        "box box"
+        "box box"
+        "box box"
+        "box box"
+        ;       
+        
+    }
+}
+
+/*laptop*/
+@media(min-width:900px){
+    .grid-container{
+        grid-template-columns: auto auto auto;
+        grid-template-areas:
+        "box box box" 
+        "box box box"
+        "box box box"
+         ;
+    }
+}
