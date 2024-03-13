@@ -34,10 +34,7 @@ html{
 }
 
 .grid-container{
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    text-align: justify;
+    background-color: black;
 }
 
 /*telefono*/
